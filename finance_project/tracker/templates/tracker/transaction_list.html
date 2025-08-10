@@ -1,0 +1,5 @@
+<ul>
+  {% for transaction in transactions %}
+  <li>{{transaction.description}}: ${{transaction.amount }}<li>
+    {%endfor%}
+</ul>
