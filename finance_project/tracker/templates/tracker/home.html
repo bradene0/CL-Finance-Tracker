@@ -7,9 +7,12 @@
 </head>
 <body>
  
-<h1>Welcome to your Finance Tracker</h1>
+<h1>Dashboard</h1>
 
-<h2>This is the main hub for managing your finances.</h2>
+<h3>Financial Summary</h3>
+<p><strong>Total Income:</strong> ${{ total_income }}</p>
+<p><strong>Total Expenses:</strong> ${{ total_expenses }}</p>
+
 
     <h3><a href="{% url 'transaction_list' %}">View All Transactions</a></h3>
 

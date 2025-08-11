@@ -53,7 +53,28 @@ def edit_transaction(request, id):
     return render(request, 'tracker/edit_transaction.html', context)
 #----------------------------------------------------------
 def home(request):
-    return render(request, 'tracker/home.html')
+    dashboard = Transaction.objects.all()
+    total_income = 0
+    total_expenses = 0
+    for transaction in dashboard:
+        if transaction.amount > 0:
+            total_income += transaction.amount
+        else:
+            total_expenses += transaction.amount
+
+    print(f"DEBUG: Total income calculated is {total_income}")
+    print(f"DEBUG: Total Expenses calculated is {total_expenses}")
+
+
+
+
+    context = {
+        'total_income': total_income,
+        'total_expenses': total_expenses,
+    }
+    return render(request, 'tracker/home.html', context)
+#----------------------------------------------------------
+
 
 
 
