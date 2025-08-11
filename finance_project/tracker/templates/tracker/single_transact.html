@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Transaction Detail</title>
+</head>
+<body>
+
+    <h1>Transaction Details</h1>
+
+    <p><strong>Date:</strong>{{ transaction.date}}</p>
+    <p><strong>Category:</strong>{{ transaction.category }}</p>
+    <p><strong>Amount:</strong>{{ transaction.amount }}</p>
+    <p><strong>Description:</strong>{{ transaction.description }}</p>
+
+
+    <hr>
+    <a href="{% url 'edit_transaction' transaction.id %}">Edit This transaction</a>
+
+    <a href="{% url 'transaction_list' %}">Back to Full List</a>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+</body>
+</html>

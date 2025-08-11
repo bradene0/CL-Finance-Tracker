@@ -17,6 +17,7 @@
   {% for transaction in transactions %}
   <li>
     {{ transaction.date }}: {{ transaction.description }} ({{transaction.category }}) - ${{transaction.amount }}
+    <a href="{% url 'edit_transaction' transaction.id %}">Edit</a>
   </li>
   {% empty %}
     <li>No transactions found.</li> 
