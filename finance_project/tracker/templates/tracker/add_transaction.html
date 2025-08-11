@@ -8,6 +8,8 @@
 <body>
 <h1>Add a Transaction</h1>
 
+  <p><a href="{% url 'home' %}">Home</a></p>
+
     <form action="{% url 'add_transaction'%}" method="post">
       {% csrf_token %}
       {{form}}
