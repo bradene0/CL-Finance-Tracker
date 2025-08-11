@@ -65,8 +65,8 @@ def home(request):
     print(f"DEBUG: Total income calculated is {total_income}")
     print(f"DEBUG: Total Expenses calculated is {total_expenses}")
 
-
-
+    
+    total_expenses = abs(total_expenses)
 
     context = {
         'total_income': total_income,
