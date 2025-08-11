@@ -51,6 +51,9 @@ def edit_transaction(request, id):
         'form': form
     }
     return render(request, 'tracker/edit_transaction.html', context)
+#----------------------------------------------------------
+def home(request):
+    return render(request, 'tracker/home.html')
 
 
 
