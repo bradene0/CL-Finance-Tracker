@@ -23,4 +23,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('tracker/', include('tracker.urls')), #reminder- forwards requests
     path('', views.home, name='home'),
+    path('accounts/', include('django.contrib.auth.urls'))
 ]
